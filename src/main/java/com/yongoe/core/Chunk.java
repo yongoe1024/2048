@@ -30,15 +30,17 @@ public class Chunk {
      * 生成新方块
      */
     public void createPoint() {
-        int x, y;
-        int num = (int) (10 * Math.random() + 1);
-        // 百分之20的概率是4
-        num = num == 1 || num == 2 ? 4 : 2;
-        do {
-            x = (int) (GameConstant.length * Math.random());
-            y = (int) (GameConstant.length * Math.random());
-        } while (map[x][y] != 0);
-        map[x][y] = num;
+        if (!isChange || !isMerge) {
+            int x, y;
+            int num = (int) (10 * Math.random() + 1);
+            // 百分之20的概率是4
+            num = num == 1 || num == 2 ? 4 : 2;
+            do {
+                x = (int) (GameConstant.length * Math.random());
+                y = (int) (GameConstant.length * Math.random());
+            } while (map[x][y] != 0);
+            map[x][y] = num;
+        }
     }
 
     public Chunk() {
@@ -169,7 +171,7 @@ public class Chunk {
     }
 
 
-    private void print(int[][] map) {
+    public void print() {
         for (int i = 0; i < GameConstant.length; i++) {
             for (int j = 0; j < GameConstant.length; j++) {
                 if (map[i][j] == 0)
@@ -216,13 +218,5 @@ public class Chunk {
 
     public int getScore() {
         return score;
-    }
-
-    public boolean isMerge() {
-        return isMerge;
-    }
-
-    public boolean isChange() {
-        return isChange;
     }
 }

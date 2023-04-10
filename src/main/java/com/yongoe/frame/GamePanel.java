@@ -60,9 +60,7 @@ public class GamePanel extends JPanel implements KeyListener {
             if (chunk.isOver()) {
                 status = false;
             } else {
-                //只有地图没变，才生成
-                if (!chunk.isChange() || !chunk.isMerge())
-                    chunk.createPoint();
+                chunk.createPoint();
             }
             this.repaint();// 绘制
         }

@@ -59,16 +59,16 @@ public class GameEvent {
                         chunkLength, chunkLength);
                 // 画数字
                 if (map[x][y] != 0) {
-                    if(map[x][y]>100)
-                        g.setFont(new Font("微软雅黑", Font.BOLD, (int)(GameConstant.fontSizeBig*0.7)));
-                    else if (map[x][y]>10) {
-                        g.setFont(new Font("微软雅黑", Font.BOLD, (int)(GameConstant.fontSizeBig*0.8)));
-                    }else
-                        g.setFont(new Font("微软雅黑", Font.BOLD,  GameConstant.fontSizeBig ));
+                    if (map[x][y] > 100)
+                        g.setFont(new Font("微软雅黑", Font.BOLD, (int) (GameConstant.fontSizeBig * 0.7)));
+                    else if (map[x][y] > 10) {
+                        g.setFont(new Font("微软雅黑", Font.BOLD, (int) (GameConstant.fontSizeBig * 0.8)));
+                    } else
+                        g.setFont(new Font("微软雅黑", Font.BOLD, GameConstant.fontSizeBig));
                     g.setColor(Color.black);
                     g.drawString(String.valueOf(map[x][y]),
-                            GameConstant.xOffset + chunkMaxLength * y + (int) (chunkMaxLength * 0.1) + (int)(chunkLength*0.1),
-                            GameConstant.yOffset + chunkMaxLength * x + (int) (chunkMaxLength * 0.1) + (int)(chunkLength*0.8));
+                            GameConstant.xOffset + chunkMaxLength * y + (int) (chunkMaxLength * 0.1) + (int) (chunkLength * 0.1),
+                            GameConstant.yOffset + chunkMaxLength * x + (int) (chunkMaxLength * 0.1) + (int) (chunkLength * 0.8));
                 }
 
             }
