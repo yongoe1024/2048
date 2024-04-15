@@ -1,7 +1,4 @@
-_# 系统
-
 ## 2048游戏
-
 
 ## 技术栈
 java8，java-swing
@@ -12,7 +9,7 @@ java8，java-swing
 ## 逻辑
 1. 初始化地图，初始化数组，随机生成两个方块
 2. 监测到按键: 
-   1. 执行move()，初始化isMerge，isChange为false，复制当前map到oldMap
+   1. 执行move()移动，设置isMerge（是否能合并），isChange（是否改变位置）为false，复制当前map到oldMap（保存旧位置） 
    2. 移动、合并数组
    3. 判断地图是否发生合并，若没合并是否移动过
    4. 没移动的同时没有空位，就结束游戏
